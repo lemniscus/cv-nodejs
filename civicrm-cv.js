@@ -1,5 +1,9 @@
-var execPromise = require('child-process-promise').exec;
-var execSync = require('child_process').execSync;
+import {execa} from 'execa';
+function execPromise(cmd, options) {
+  return execa(options)`${cmd}`;
+}
+
+const execSync = require('child_process').execSync;
 
 var escape = function(cmd) {
   return '\'' + cmd.replace(/'/g, "'\\''") + '\'';
