@@ -20,7 +20,7 @@
     "child-process-promise": "^2.2.1"
   },
   "overrides": {
-    "cross-spawn": "latest"
+    "cross-spawn": "^7.0.6"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5"
