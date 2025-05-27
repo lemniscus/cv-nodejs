@@ -1,6 +1,7 @@
 {
   "name": "civicrm-cv",
-  "version": "0.1.2",
+  "type": "module",
+  "version": "0.2.0",
   "description": "Client library for accessing the cv command",
   "main": "civicrm-cv.js",
   "scripts": {
