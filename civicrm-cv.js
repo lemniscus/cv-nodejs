@@ -1,4 +1,5 @@
-import {execa} from 'execa';
+const { execa } = await import("execa");
+
 function execPromise(cmd, options) {
   return execa(options)`${cmd}`;
 }
@@ -29,7 +30,7 @@ var jsonExecFuncs = {
   }
 };
 
-module.exports = function(options) {
+export default function(options) {
   if (!options || options.mode === undefined) {
     throw "civicrm-cv: Please specify \'mode\' option.";
   }
