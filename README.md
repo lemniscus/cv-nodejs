@@ -30,7 +30,9 @@ returned as promises:
 ```javascript
 // Call the Contact.get API for contact #100. Return a promise.
 
-var cv = require('civicrm-cv')({mode: 'promise'});
+import {default as cvFactory} from 'civicrm-cv';
+const cv = cvFactory({'mode':'promise'});
+
 cv('api contact.get id=100').then(function(result){
   console.log("Found records: " + result.count);
 });
@@ -41,7 +43,9 @@ Alternatively, you may execute subcommands synchronously:
 ```javascript
 // Lookup the general site metadata. Return the data synchronously (blocking I/O).
 
-var cv = require('civicrm-cv')({mode: 'sync'});
+import {default as cvFactory} from 'civicrm-cv';
+const cv = cvFactory({'mode':'sync'});
+
 var result = cv('vars:show');
 console.log("The Civi database is " + result.CIVI_DB_DSN);
 console.log("The CMS database is " + result.CMS_DB_DSN);
@@ -58,7 +62,9 @@ involves passing unusual characters, e.g.
 ```javascript
 // Execute a small fragment of PHP code. Return the data synchronously (blocking I/O).
 
-var cv = require('civicrm-cv')({mode: 'sync'});
+import {default as cvFactory} from 'civicrm-cv';
+const cv = cvFactory({'mode':'sync'});
+
 var result = cv(['php:eval', '$x = 2; return [$x * $x];']);
 console.log("Received value: " + result);
 ```
