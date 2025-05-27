@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/civicrm/cv-nodejs#readme",
   "dependencies": {
-    "child-process-promise": "^2.2.1"
-  },
-  "overrides": {
+    "child-process-promise": "^2.2.1",
     "cross-spawn": "^7.0.6"
   },
   "devDependencies": {
